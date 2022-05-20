@@ -1,0 +1,28 @@
+// 정수 2개를 입력받아서 큰 수에서 작은 수로 나눈 몫과 나머지를 출력
+import java.util.Scanner;
+
+public class Revenge {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		// 정수 a, b 입력받기
+		System.out.println("두 개의 정수를 써주세요.");
+		int x = input.nextInt();
+		int y = input.nextInt();
+		// int div;
+		// int mod; 변수 선언을 먼저 해주고 중괄호 안에 초기화를 하면 컴파일 오류가 안난다
+		if (x >= y) { // a / b, a % b 계산하기
+			// div = a / b;
+			// mod = a % b;
+			System.out.printf("큰 수 %d를 작은 수 %d로 나눈 몫은 %d, 나머지는 %d입니다."
+								, x, y, x / y, x % y);
+		} else { // b / a, b % a 계산하기
+			// div = b / a;
+			// mod = b % a;
+			System.out.printf("큰 수 %d를 작은 수 %d로 나눈 몫은 %d, 나머지는 %d입니다."
+								, y, x, y / x, y % x);
+		} // 결과 출력하기
+		// System.out.println("몫: " + div);
+		// System.out.println("나머지: " + mod);
+	}
+}

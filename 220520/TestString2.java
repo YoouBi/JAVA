@@ -1,0 +1,20 @@
+public class TestString2 {
+	public static void main(String[] args) {
+		String hello = "Hello"; // 문자열은 문자로 이루어진 객체인데 H e l l o 하나하나가 char이다
+		// 이 문자들은 순서대로 시작하는데 이걸 index라고 하고, 0부터 시작된다 ex)o의 인덱스는 4
+		// 띄워쓰기, 대행문자도 인덱스에서 하나의 값을 가진다
+		// String hello = (String) "Hello"; 항변환은 안된다
+		
+		char h = hello.charAt(0);
+		System.out.println(h);
+		System.out.println(hello.charAt(1));
+		// System.out.println(hello.charAt(-1)); 컴파일 자체는 문제가 없는데 실행에 오류가 나서 도중에 멈춘다
+		System.out.println(hello.charAt(2));
+		System.out.println(hello.charAt(3));
+		System.out.println(hello.charAt(4));
+		// 내가 원하는 순서에 있는 문자 한개를 찾아낼 수 있는 메소드
+		
+		int length = hello.length();
+		System.out.println(length);
+	}
+}

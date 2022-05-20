@@ -1,0 +1,19 @@
+public class IntegerToString {
+	public static void main(String[] args) {
+		String strNum = new String(12345); // String strNum = 12345; 는 숫자 그대로 출력되기 때문에 문자열로 바꿔주려면
+		System.out.println(strNum);
+		
+		String strNum2 = String.valueOf(12345); // 특이한 static.
+		// 메소드 원래는 객체를 만들고 그 안에 있는 메소드를 불러냈는데
+		
+		String strNum3 = "" + 12345; // "12345"는 처음부터 문자열 표현이고,
+		
+		int i = 5055;
+		String strNum4 = "" + i; //로 문자열로 변환을 해주는 것이다
+		System.out.println(strNum4.charAt(0)); // 해당하는 문자열을 strNum4로 참조할 것이다
+		// 문자열 자체는 안에 메소드가 있는데 charAt 문자의 인덱스 0으로 5라는 문자를 가져오게...
+		
+		System.out.println(i + 100);
+		System.out.println(strNum2 + 100);
+	}
+}
