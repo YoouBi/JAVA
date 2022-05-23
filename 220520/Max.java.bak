@@ -65,12 +65,10 @@ public class Max {
 			biggest = z;
 			middle = y;
 			small = x;
-		} else if (z >= x && x >= y) {
+		} else {
 			biggest = z;
 			middle = x;
 			small = y;
-		} else {
-			biggest = x;
 		}
 		
 		System.out.printf("입력한 3개의 정수는 %d, %d, %d 순으로 작아집니다.", biggest, middle, small);

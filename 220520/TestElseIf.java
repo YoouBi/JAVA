@@ -15,6 +15,17 @@ public class TestElseIf {
 			size = "small";
 		}
 		
+		/* if (cup > 200) {
+			size = "large";
+		}
+		if (cup >= 100) {
+			size = "medium";
+		}
+		if { //
+			size = "small";
+		} 프로그램 특성상 꼭 한번 검사하지만
+		else if는 아닐때 검사하기 때문에 다르다 */
+		
 		/*
 		if (조건식) {
 

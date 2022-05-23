@@ -10,7 +10,7 @@ public class Calculator {
 		int x = input.nextInt();
 		int y = input.nextInt();
 		input.nextLine();
-		System.out.print("계산하고 싶은 사칙연산 중 한 기호(연산자)를 써주세요");
+		System.out.print("계산하고 싶은 사칙연산 중 한 기호(연산자)를 써주세요.");
 		String cal = input.nextLine();
 		
 		if (cal.equals("+")) {

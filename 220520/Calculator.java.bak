@@ -21,6 +21,8 @@ public class Calculator {
 			System.out.printf("%d와 %d를 곱한 값은 %d다.", x, y, x * y);
 		} else if (cal.equals("/")) {
 			System.out.printf("%d에 %d를 나눈 몫은 %d이고 나머지는 %d다.", x, y, x / y, x % y);
+		} else {
+			System.out.println("입력이 잘못되었습니다.");
 		}
 	}
 }

@@ -13,37 +13,22 @@ public class Max {
 		int middle;
 		int small;
 		
-		/* if (x >= y) {
-			if (y >= z) {
-				biggest = x;
-				middle = y;
-				small = z;
+		/* int max;
+		if (a > b) {
+			if (a > c) {
+				max = a;
 			} else {
-				biggest = z;
-				if (x >= z) {
-				middle = x;
-				small = y;
-				} else {
-				middle = y;
-				small = x;
-				}
+				max = c;
 			}
 		} else {
-			if (y >= z) {
-				biggest = y;
-				if (x >= z) {
-					middle = x;
-					small = z;
-				} else {
-					middle = z;
-					small = x;
-				}
+			if (b > c) {
+				max = b;
 			} else {
-				biggest = z;
-				middle = y;
-				small = x;
+				max = c;
 			}
-		} */
+		}
+
+		System.out.println("가장 큰수는 : " + max); */
 		
 		if (x >= y && y >= z) {
 			biggest = x;

@@ -6,6 +6,8 @@ public class NotOperator {
 		System.out.println(t);
 		
 		!((10 > 3) && (3 == 3)) // false
-		!(!(10 > 3) || (3 == 3)) // false
+		!(!(10 > 3) || (3 == 3)) // not((false) or (true))
+								// not(true)
+								// false								
 	}
 }
