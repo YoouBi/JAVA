@@ -1,0 +1,39 @@
+// 사용자 콘솔 입력 -> 연산 -> 결과 콘솔 출력
+// 73쪽 1번(마일 - > 킬로미터), 2번(잔돈 계산), 3번(구 부피)
+// 102쪽 6번(저금통), 101쪽 2번(나눈 몫과 나머지)
+// 사용자가 입력한 5자리의 정수를 역순으로 출력하는 프로그램 ex) 12345 -> 54321
+
+import java.util.Scanner;
+
+public class Answer {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		double mi;
+		
+		System.out.print("몇 마일입니까?");
+		mi = input.nextDouble();
+		
+		double km = mi * 1.609;
+		
+		System.out.print(mi + " 마일은 " + km + "킬로미터입니다.");
+	}
+}
+
+class Changes {
+	static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		int money;
+		int price;
+		
+		System.out.print("얼마를 받았습니까?");
+		money = input.nextInt();
+		System.out.print("구입한 상품의 가격은 얼마입니까?");
+		price = input.nextInt();
+		
+		double vat = price / 10;
+		int changes = money - price
+		System.out.print("구입한 물품의 부가세는 " + vat + "잔돈은 " + changes + "입니다.");
+	}
+}

@@ -1,0 +1,38 @@
+// 73쪽 3번(구 부피)
+
+import java.util.Scanner;
+
+public class Volume {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("구의 반지름은 얼마입니까?");
+		double r = input.nextInt();
+		double volume =  (r * r * r) * 4.0 / 3;
+		// double volume는 담기는 통일 뿐이라 오른쪽의 연산 결과를 집어넣을 뿐, 영향을 줄 수는 없다
+		// 따라서 4 / 3 * r * r * r; 일때엔 왼쪽부터 먼저 계산되는 연산 순서에 따라 4 / 3이 먼저 일어나 몫인 1만 계산되므로
+		// r * r * r * 4.0 / 3; 는 실수인 r을 따라 이후 일어나는 * 4 의 계산부터 실수가 되었다
+		
+		System.out.print("구의 부피는 " + volume +" 입니다.");
+	}
+}
+
+/* 구의 반지름 - 사용자 콘솔 입력 (실수형)
+   구의 부피 4/3r^3
+   
+public class Globe {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("구의 반지름 입력해주세요");
+		double radius = scan.nextDouble();
+		
+		계산이 안맞으니 쪼개서 확인해보기...
+		System.out.println("반지름 확인 : " + radius);
+		System.out.println("반지름 세제곱 확인 : " + radius * radius * radius);
+		System.out.println("4 / 3 확인 : " + 4.0 / 3.0); 실수형끼리 계산시키기 위해 .0을 붙여준다
+		4와 3이 정수형이라 두개의 몫인 1만 나온다...
+		// double volume = 4 / 3 * radius * radius * radius;
+		
+		// System.out.println("구의 부피: " + volume);
+	}
+} */

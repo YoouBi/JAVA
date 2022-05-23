@@ -1,0 +1,16 @@
+// 사용자 콘솔 입력 -> 연산 -> 결과 콘솔 출력
+// 73쪽 1번(마일 - > 킬로미터)
+
+import java.util.Scanner;
+
+public class Mile {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("km로 변환하고 싶은 mile은 몇 mile입니까?");
+		double mi = input.nextDouble();
+		double km = mi * 1.609; // = 도 연산자이기 때문에 = 주위를 띄울거면 * 주위도 띄우고, 둘 다 붙일거면 붙여서 깔끔하게 보이게 한다
+		
+		System.out.println(mi + " mile은 " + km + "km입니다.");
+	}
+}

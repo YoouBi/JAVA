@@ -1,0 +1,14 @@
+public class Test {
+	public static void main(String[] args) {
+		// System.out.println(44 + 72); 결과값이 변하지 않는 리터럴 상수
+		// 개발자의 입장에서 int로 계산은 쉽게 할 수 있지만 사용자는 수정할 수 없으니 입력이라는 방법을 쓴다
+		// 프로그램을 만들 때엔 내 의도대로 개발되었는가, 사용자가 제대로 동작할 수 있는가
+		int x = 22;
+		int y = 63;
+		
+		System.out.println(x + y);
+		System.out.println(x - y);
+		System.out.println(x * y);
+		System.out.println(x / y);
+	}
+}
