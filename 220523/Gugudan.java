@@ -16,7 +16,7 @@ public class Gugudan {
 		
 		/* int x = 1;
 		while (x <= 9) {
-			System.out.printf("4 * %d = %d\n", x, 4 * x);
+			System.out.printf("%d * %d = %d\n", 4, x, 4 * x);
 			x++;
 		} */
 		System.out.println("몇단의 구구단을 출력하고 싶나요?");

@@ -8,7 +8,8 @@ public class LoopFor2 {
 			}
 		}
 		
-		/* for (int i = 10; i <= 99; i++) {
+		/*
+		for (int i = 10; i <= 99; i++) {
 			int left = i / 10;
 			int right = i % 10;
 			if (left + right == 7) {

@@ -27,6 +27,5 @@ public class Gugudan {
 			System.out.printf("%d * %d = %d\n", y, z, y * z);
 			z++;
 		}
-		
 	}
 }

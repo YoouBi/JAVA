@@ -28,9 +28,9 @@ public class LoopFor1 {
 		} */
 		
 		// 21부터 30까지의 3의 배수 출력하기
-		for (int i = 21; i <= 30; i += 3) {
+		/* for (int i = 21; i <= 30; i += 3) {
 			System.out.println(i);
-		}
+		} */
 		
 		// 30 29 28 ... 20 까지 역순 출력
 		for (int i = 30; i >= 20; i--) {

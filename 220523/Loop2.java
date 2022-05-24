@@ -28,14 +28,14 @@ public class Loop2 {
 			l += 3;
 		} // 무한히 연산되는 콘솔창은 ctrl + c 로 멈출 수 있음! */
 		
-		// ☆
-		// ★
-		// ☆
-		// ★
-		// ☆
-		// ★
-		// ☆
-		// ★
+		// ☆ 0
+		// ★ 1
+		// ☆ 2
+		// ★ 3
+		// ☆ 4
+		// ★ 5
+		// ☆ 6
+		// ★ 7
 		int m = 0;
 		int n = 0;
 		while (m < 8) {
@@ -50,6 +50,17 @@ public class Loop2 {
 		}
 		
 		/* int q = 0;
+		while (q < 8) {
+			if (q % 2 == 0) {
+				// 흰 별
+			} else {
+				// 검은 별
+			}
+			// System.out.println( (q % 2 == 0) ? "☆" : "★" );
+			q++;
+		}
+		
+		int q = 0;
 		while (q < 8) {
 			System.out.println( (q % 2 == 0) ? "☆" : "★" );
 			q++;

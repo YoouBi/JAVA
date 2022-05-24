@@ -2,7 +2,7 @@
 // n^m(n의 m제곱)을 출력하기
 import java.util.Scanner;
 
-public class InputMul {
+public class Pow {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		
