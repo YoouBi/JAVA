@@ -1,0 +1,30 @@
+public class SwitchCase {
+	public static void main(String[] args) {
+		/* if (i == 1) {
+			
+		} else if (i == 2) {
+			
+		} else if (i == 3) {
+			
+		} else {
+			
+		} 와 비슷하게 사용할 수 있는 SwitchCase문 */
+		int i = 3;
+			
+		switch (i) { // 3을 찾아가서 출력
+		// 자바 7 버전에서는 정수 뿐만 아니라 문자열도 되게 함
+			case 1:
+			System.out.println("일");
+			break; // break가 없다면 밑의 케이스까지 다 출력
+			case 2:
+			System.out.println("이");
+			break;
+			case 3:
+			System.out.println("삼");
+			break;
+			default: // 정수값에 해당하는 케이스가 없을 때 디폴트 값을 찾아옴
+			System.out.println("일이삼 아님"); // 디폴트값도 없다면 그냥 빠져나감
+		}
+		System.out.println("프로그램 종료");
+	}
+}
