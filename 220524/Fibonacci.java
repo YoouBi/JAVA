@@ -13,5 +13,6 @@ public class Fibonacci {
 			}
 			System.out.print(j +" ");
 		}
+		// while문으로도
 	}
 }

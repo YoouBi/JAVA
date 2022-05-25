@@ -2,12 +2,6 @@
 // 1 2 Fizz 4 Buzz ... 15라면 Fizz Buzz
 // 35까지
 
-// Fibonacci 수열
-// 1 1 2 3 5 8 13 21 34 ...
-// 100 이하
-
-// 사용자가 입력한 정수가 소수임을 확인하여 출력하는 프로그램
-
 public class FizzBuzz {
 	public static void main(String[] args) {
 		

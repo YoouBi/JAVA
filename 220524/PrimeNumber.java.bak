@@ -19,7 +19,7 @@ public class PrimeNumber {
 		}
 	
 		if (y == 2) {
-			System.out.print(" 로 약수의 개수가 1과 자기자신 2개뿐인 소수이다.");
+			System.out.print(" 로 약수의 개수가 2개인 소수이다.");
 		} else {
 			System.out.printf(" 로 약수의 개수가 %d개로 소수가 아니다.", y);
 		}
