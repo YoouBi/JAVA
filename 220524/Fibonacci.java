@@ -14,5 +14,6 @@ public class Fibonacci {
 			System.out.print(j +" ");
 		}
 		// while문으로도
+		// 코드는 이해하기 쉬우면서 연산 빠르면서 '정확'하면서
 	}
 }

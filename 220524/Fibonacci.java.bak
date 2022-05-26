@@ -4,7 +4,8 @@
 
 public class Fibonacci {
 	public static void main(String[] args) {
-		for (int i = 1, j = 0; ; i += j) {
+		int j = 0;
+		for (int i = 1; ; i += j) {
 			System.out.print(i +" ");
 			j += i;
 			if (j >= 100){
@@ -12,5 +13,6 @@ public class Fibonacci {
 			}
 			System.out.print(j +" ");
 		}
+		// while문으로도
 	}
 }
