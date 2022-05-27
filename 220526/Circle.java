@@ -4,12 +4,14 @@
 import java.util.Scanner;
 
 public class Circle {
+	// 헤더 파라미터(반환타입)
 	public static double area(double r) {
-		double circleArea = r * r * 3.14;
-		
-		return circleArea;
+		// 바디
+		// 원 넓이 구해서 반환
+		return r * r * 3.14;
 	}
 	
+	// 문장
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		

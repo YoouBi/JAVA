@@ -4,7 +4,7 @@
 
 import java.util.Scanner;
 
-public class BMI {
+public class BMITest {
 	public static double bmi(double i, double j) {
 		return i / (j * j);
 	}
@@ -12,9 +12,16 @@ public class BMI {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		System.out.println("키(m)와 몸무게(kg)를 순서대로 적어주세요.");
-		double m = scan.nextDouble();
-		double kg = scan.nextDouble();
+		double m;
+		double kg;
+		do {
+			System.out.println("키(m)와 몸무게(kg)를 순서대로 적어주세요.");
+			m = scan.nextDouble();
+			if (!(m < 3)) {
+				System.out.println("(※ 키는 cm 가 아닌 m 단위로 입력해주세요!)");
+			}
+			kg = scan.nextDouble();
+		} while (!(m < 3));
 		
 		double cm = m * 100;
 		
