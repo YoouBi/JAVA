@@ -1,0 +1,14 @@
+public class TestDate {
+	public static void main(String[] args) {
+		Date d = new Date();
+		d.years = 2022;
+		d.month = 5;
+		d.days = 27;
+		
+		d.printYMD();
+		d.printMDY();
+		
+		String year = d.getYearTwoDigit();
+		System.out.println(year);
+	}
+}

@@ -3,7 +3,7 @@ public class TestBox {
 	public static void main(String[] args) {
 		// Box none = null; // 참조형 변수는 null(지금 참조하는게 없다)을 참조할 수 있다
 		// none.width = 10; // 컴파일러는 none 박스의 가로가 있다고 생각해서 될거라 생각함
-		// 실행하면 none을 찾아가보자 근데 null이네 가로가 없네! 해서 오류 남
+		// 실행하면 none을 찾아가보자 근데 null이네 없는 박스니 가로가 없네! 해서 실행 중 오류 남
 		
 		// 클래스로 만들어둔 Box로 변수를 만듦
 		Box box1; // 하나의 타입으로 사용되어서 Box를 참조하는 참조 변수가 선언된 것

@@ -40,22 +40,16 @@ public class BookMark {
 		} while (!(choice < 3));
 		b.select = choice;
 		
-		b.Select();
+		b.select();
 		System.out.println();
 		//*****************************************************
-		Movie c = newMovie();
+		Movie c = new Movie();
 		
 		System.out.println("찾고계신 영화의 제목이 무엇입니까?");
+		scan.nextLine();
 		String x = scan.nextLine();
-		int y = scan.nextInt();
-		String z = scan.nextLine();
-		int g = scan.nextInt();
+		c.tit = x;
 		
-		c.title = x;
-		c.grade = y;
-		c.director = z;
-		c.nyeondo = g;
-		
-		
+		c.MovieGrade();
 	}
 }

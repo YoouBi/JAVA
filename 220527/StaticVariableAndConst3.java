@@ -11,6 +11,7 @@ public class StaticVariableAndConst3 {
 	
 	// 클래스 안에는 멤버라는게 존재하는데 * ? 객체지향. 필드. 메소드.
 	// 우리가 쓰는 친구들에는 static이라는 키워드가 붙어있는데 정적메소드로서 객체를 다루는....?
+	// 정적인 실행은 실행 전부터 언제나 있다
 	
 	// 외부에서 StaticVariableAndConst3.number(클래스 이름) 라는 이름으로 접근하면 사용할 수 있다
 	

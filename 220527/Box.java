@@ -4,6 +4,7 @@ public class Box {
 	int width; // 상태라는 것은 클래스 안에서 변수의 형태로 표현 가능
 	int height;
 	/* int volume = length * width * height;가 왜 안되느냐!
+	// 부피를 상태로 나타내봤다가 안돼서 동작으로 나타내봄
 	
 	int volume;로 변수 선언을 먼저 하고
 
@@ -18,6 +19,7 @@ public class Box {
 	*/
 	
 	// 메소드/기능 or 동작은 메소드로 표현 가능
+	// void는 리턴값 ()는 무언갈 구하기 위해 외부에서 전달 받아야하는 값, 파라미터
 	public void printAllState() {
 		System.out.println(width); // 필드라는 친구는 width가 지금 {}안에 없는데 어떻게 출력할 수 있지?
 		System.out.println(length); // 범위가 public void printAllState() { 가 아니라 public class Box { 안 전부로

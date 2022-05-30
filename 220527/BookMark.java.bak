@@ -43,19 +43,13 @@ public class BookMark {
 		b.Select();
 		System.out.println();
 		//*****************************************************
-		Movie c = newMovie();
+		Movie c = new Movie();
 		
-		System.out.println("영화의 정보가 부족합니다.\n제목, 평점, 감독, 발표된 연도까지 적어주시면 찾고계신 영화의 정확한 정보를 전달해드리겠습니다.");
+		System.out.println("찾고계신 영화의 제목이 무엇입니까?");
+		scan.nextLine();
 		String x = scan.nextLine();
-		int y = scan.nextInt();
-		String z = scan.nextLine();
-		int g = scan.nextInt();
+		c.tit = x;
 		
-		c.title = x;
-		c.grade = y;
-		c.director = z;
-		c.nyeondo = g;
-		
-		
+		c.MovieGrade();
 	}
 }

@@ -3,9 +3,11 @@ public class Box {
 	int length; // 가로 세로의 값을 정해줘야하는데 값으로 나타낼 수 있는 것을 상태라고 한다
 	int width; // 상태라는 것은 클래스 안에서 변수의 형태로 표현 가능
 	int height;
-
-	int volume;로 변수 선언을 먼저 하고
+	/* int volume = length * width * height;가 왜 안되느냐!
+	// 부피를 상태로 나타내봤다가 안돼서 동작으로 나타내봄
 	
+	int volume;로 변수 선언을 먼저 하고
+
 	public int getVolume() {
 		return volume; 으로 밑의 인스턴스에서 참조해서 하는 방식도 되지 않는다
 	} 왜냐하면 Box a = new Box(); 같은 방식으로 불러왔을 때 초기화되는 형식이
@@ -29,7 +31,6 @@ public class Box {
 	// 알려줄 수 있음 (반환)
 	// Box로 만들어진 인스턴스들은 가로세로길이 값이 다 알려져있기 때문에 호출하면 됨
 	public int getVolume() {
-		volume = length * width * height
-		return volume;
+		return length * width * height;
 	}
 }
