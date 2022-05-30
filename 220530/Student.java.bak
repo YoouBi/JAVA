@@ -1,0 +1,60 @@
+// 학생
+
+// 이름
+// 국어 점수
+// 영어 점수
+// 수학 점수
+
+// 생성자
+// getter/setter
+
+// 자기 평균 점수를 알려줄 수 있음.
+class Student {
+	private String name;
+	private int korean;
+	private int english;
+	private int math;
+	
+	public Student(String n, int k, int e, int m) {
+		name = n;
+		korean = k;
+		english = e;
+		math = m;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String n) {
+		name = n;
+	}
+	
+	public int getKorean() {
+		return korean;
+	}
+	
+	public void setName(int k) {
+		korean = k;
+	}
+	
+	public int getEnglish() {
+		return english;
+	}
+	
+	public void setEnglish(int e) {
+		english = e;
+	}
+	
+	public int getMath() {
+		return math;
+	}
+	
+	public void setMath(int m) {
+		math = m;
+	}
+	
+	public void averageScore() {
+		System.out.printf("%s의 평균 점수는 %02f이다.", name, (korean + english + math)/3);
+	}
+}
