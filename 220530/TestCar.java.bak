@@ -10,7 +10,7 @@ public class TestCar {
 		// System.out.println(c.color); // 외부에서는 출력해서 눈에 보이게 하겠다도 안됨
 		// 객체 지향이라는 것은 행동이기 때문에 이렇게 두고 사용하는 일이 거의 없음
 		
-		 // 필드 값 color에 넣음
+		c.setColor("빨강"); // 필드 값 color에 넣음
 		System.out.println(c.getColor());
 		
 		// c2.setColor(null);

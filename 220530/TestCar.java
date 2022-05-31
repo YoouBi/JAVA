@@ -6,7 +6,7 @@ public class TestCar {
 		Car c2 = new Car("yellow");
 		Car c3 = new Car("red");
 		
-		// c.color = "빨강"; // private을 외부 클래스에서 변경할 수 없어서 컴파일 오류 남
+		// c.color = "빨강"; // private를 외부 클래스에서 변경할 수 없어서 컴파일 오류 남
 		// System.out.println(c.color); // 외부에서는 출력해서 눈에 보이게 하겠다도 안됨
 		// 객체 지향이라는 것은 행동이기 때문에 이렇게 두고 사용하는 일이 거의 없음
 		

@@ -8,6 +8,19 @@ class Time {
 		minute = m;
 		 second = s;
 	}
+	
+	public int getTime() {
+		return time;
+	}
+	public int getMinute() {
+		return minute;
+	}
+	public int getSecond() {
+		return second;
+	}
+	public void printAll() {
+		System.out.println(time + ":" + minute + ":" + second);
+	}
 }
 
 class AlarmClock {
@@ -18,6 +31,10 @@ class AlarmClock {
 		alarmTime = a;
 		currentTime = c;
 	}
+	
+	public Time getCurrentTime() {
+		return currentTime;
+	}
 }
 
 public class AlarmClockTest {
@@ -25,6 +42,13 @@ public class AlarmClockTest {
 		Time alarm = new Time(6, 0, 0);
 		Time current = new Time(12, 56, 34);
 		AlarmClock c = new AlarmClock(alarm, current);
-		System.out.println(c);
+		
+		Time hour = c.getCurrentTime();
+		// int hour = c.getCurrentTime().getTime();
+		System.out.println(hour);
+		System.out.println(hour.getTime());
+		hour.printAll();
 	} // end main
 } // end class
+
+// 오버 엔지니어링으로 필요 이상의 개발을 해서 작업 속도를 늦출수도 있다
