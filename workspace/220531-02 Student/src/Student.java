@@ -12,14 +12,16 @@ public class Student {
 	public int b;
 	public int c;
 	public int d;
-	
-	String k;
 
 	public Student(String name, int kor, int eng, int math) {
 		this.name = name;
 		this.kor = kor;
 		this.eng = eng;
 		this.math = math;
+	}
+	
+	public Student(String name) {
+		this.name = name;
 	}
 	
 	public Student() {
@@ -57,6 +59,10 @@ public class Student {
 	public void setMath(int math) {
 		this.math = math;
 	}
+	
+//	public boolean compare(Student other) {
+//		return this.getAverage() >= other.getAverage();
+//	}
 
 	public int getAverage() {
 		return getSum() / 3;
@@ -99,14 +105,12 @@ public class Student {
 class Class {
 	Scanner scan = new Scanner(System.in);
 	
-	
-	
 	Student student1, student2, student3;
 	void pipiName() { // 이름 목록 불러내는 프로그램
-		System.out.printf("삐약이반의 학생으로는 %s 학생, %s 학생, %s 학생이 있습니다.", student1.getName(), student2.getName(), student3.getName());
+		System.out.printf("삐약이반의 학생으로는 %s 학생, %s 학생, %s 학생이 있습니다.", 
+				student1.getName(), student2.getName(), student3.getName());
+		System.out.println();
 	}
-	
-	
 	
 	public Class(Student student1, Student student2, Student student3) {
 		super();
@@ -118,11 +122,8 @@ class Class {
 	void pipiAverage() {
 		int aver = (student1.getAverage() + student2.getAverage() + student3.getAverage()) / 3;
 		System.out.printf("삐약이반 전체의 평균은 %d점입니다.", aver);
+		System.out.println();
 	}
-	
-	
-	
-
 	
 	public Student firstName() {
 		if (student1.getAverage() >= student2.getAverage() && student1.getAverage() >= student3.getAverage()) {
@@ -138,11 +139,8 @@ class Class {
 		Student bestStudent = firstName();
 		System.out.printf("삐약이반의 1등은 %s 학생으로 국어 %d점 영어 %d점 수학 %d점 총 평균점수 %d점을 보유하고 있습니다.", 
 				bestStudent.getName(), bestStudent.getKor(), bestStudent.getEng(), bestStudent.getMath(), bestStudent.getAverage());
+		System.out.println();
 	}
-	
-	
-	
-	
 	
 	public void pipiStudent() { // 이름 목록과 평균, 1등 학생의 정보를 볼 수 있는 프로그램
 //		pipi();
@@ -169,10 +167,11 @@ class Class {
 	
 
 class input {
-	
 	Student input;
 	Student inputStudent() {
 		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("삐약이반에 들어갈 학생의 정보를 입력해주세요.");
 		String name = scan.nextLine();
 		int kor = scan.nextInt();
 		int eng = scan.nextInt();
