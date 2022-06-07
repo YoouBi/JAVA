@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /*
 	오늘:2022-06-03 금
@@ -24,70 +25,80 @@ public class PrintCalendar {
 	public static void main(String[] arg) {
 		Scanner scan = new Scanner(System.in);
 		Calendar now = Calendar.getInstance();
-		LocalDate nw = LocalDate.now();
-		
+		LocalDate nw = LocalDate.now();		
 		Date date = now.getTime();
 		
-		System.out.println("날짜 변경을 하시겠습니까?");
-		// 아 놀다가 입력하는거 못했으니까 주말에 하기!
+		int x;
 		
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		String result = dateFormat.format(date);
-		int year = nw.getYear();
-		int month = nw.getMonth().getValue();
+//		String weekInt = now.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.KOREAN);
 		
-		int weekInt = nw.getDayOfWeek().getValue();
-		String weekKor = null;
-		switch (weekInt) {
-		case 1: weekKor = "월"; break;
-		case 2: weekKor = "화"; break;
-		case 3: weekKor = "수"; break;
-		case 4: weekKor = "목"; break;
-		case 5: weekKor = "금"; break;
-		case 6: weekKor = "토"; break;
-		case 7: weekKor = "일"; break;
-		}
+				
+		do {
+			System.out.println("날짜 변경을 하시겠습니까?");
+			System.out.println("1.오늘의 날짜 그대로 출력 2.날짜 변경 3.종료");
+			x = scan.nextInt();
 		
-		LocalDate firstDay = nw.withDayOfMonth(1);
-		int zero = firstDay.getDayOfWeek().getValue();
-		
-		int lastDay = 0;
-		switch (month) {
-			case 1:		case 3:		case 5:		case 7:
-			case 8:		case 10:	case 12:
-				lastDay = 31;
+			if (x == 2) {
+				System.out.println("변경할 날짜의 년월일을 입력해주세요.");
+				int y = scan.nextInt();
+				int m = scan.nextInt();
+				int d = scan.nextInt();
+				now.set(y, m, d);
+			} else if (x == 3) {
+				System.out.println("시스템을 종료합니다.");
 				break;
-			case 4:		case 6:		case 9:		case 11:
-				lastDay = 30;
-				break;
-			case 2:
-				if(((year % 4 == 0 ) && (year % 100 != 0)) || (year % 400 != 0)) {
-					lastDay = 29;
-				} else {
-					lastDay = 28;
-				}
-		}
-		System.out.println("오늘: " + result + " " + weekKor);
-		System.out.println("일　월　화　수　목　금　토");
-		// 마지막날 구하는거 스위치 써야함ㅠ
-		int k = 1;
-		int i = 0;
-		for (int j = 1; j <= 6; j++) {
-				for(i = 1; i <= 7; i++) {
-					if (zero == 7) {
-						System.out.printf("%02d ", k);
-						k++;
-					} else if (zero > 0) {
-						System.out.print("   ");
-						zero--;
+			} else if (x >= 4) {
+				System.out.println("번호 입력이 잘못되었습니다.");
+			}
+
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd E", Locale.KOREAN);
+			String result = dateFormat.format(date);
+			int year = nw.getYear();
+			int month = nw.getMonth().getValue();
+			LocalDate firstDay = nw.withDayOfMonth(1);
+			int zero = firstDay.getDayOfWeek().getValue();
+			
+			int lastDay = 0;
+			switch (month) {
+				case 1:		case 3:		case 5:		case 7:
+				case 8:		case 10:	case 12:
+					lastDay = 31;
+					break;
+				case 4:		case 6:		case 9:		case 11:
+					lastDay = 30;
+					break;
+				case 2:
+					if(((year % 4 == 0 ) && (year % 100 != 0)) || (year % 400 != 0)) {
+						lastDay = 29;
 					} else {
-						System.out.printf("%02d ", k);
-						k++;
+						lastDay = 28;
 					}
+			}
+
+			System.out.println("오늘: " + result);
+			System.out.println("일　월　화　수　목　금　토");
+			int k = 1;
+			int i = 0;
+			for (int j = 1; j <= 6; j++) {
+					for(i = 1; i <= 7; i++) {
+						if (zero == 7) {
+							System.out.printf("%02d ", k);
+							k++;
+						} else if (zero > 0) {
+							System.out.print("   ");
+							zero--;
+						} else {
+							System.out.printf("%02d ", k);
+							k++;
+						}
+						if (k > lastDay) break;
+					}
+					System.out.println();
 					if (k > lastDay) break;
-				}
-				System.out.println();
-				if (k > lastDay) break;
-		}
+			}
+			
+			now.clear();
+			
+		} while (x != 3);
 	}
 }

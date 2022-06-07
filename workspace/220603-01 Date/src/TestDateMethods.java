@@ -5,17 +5,18 @@ import java.util.Date;
 
 public class TestDateMethods {
 	public static void main(String[] args) {
-		Calendar now = Calendar.getInstance();
+//		Calendar now = Calendar.getInstance();
+//		now.set(Calendar.YEAR, 2000); // 왼쪽은 바꿀 필드, 오른쪽은 바꿀 값
 //		now.set(2022, Calendar.JUNE, 4);
-		now.add(Calendar.DAY_OF_MONTH, 1);
+//		now.add(Calendar.DAY_OF_MONTH, 1);
+//		
+//		Date date = now.getTime();
+//		
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//		String result = dateFormat.format(date);
+//		System.out.println(result);
 		
-		Date date = now.getTime();
-		
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		String result = dateFormat.format(date);
-		System.out.println(result);
-		
-//		LocalDate now = LocalDate.now();
+		LocalDate now = LocalDate.now();
 //		LocalDate nowPlusOne = LocalDate.now().plusDays(1);
 //		
 //		// 내일의 날짜 객체
@@ -31,5 +32,11 @@ public class TestDateMethods {
 		// getYear()는 Gets the year field. 라는 설명이 나와있음(클릭하면 자세한 설명)
 		// ()는 파라미터로 아무것도 없으니 안써줌. 왼쪽에 쓰여 있는 것이 리턴타입(반환형)으로 getYear의 반환형은 int값
 		// 이 내용 전부가...컨트롤 스페이스 하면 그대로 나옴...
+		
+		// 내일의 날짜 객체
+		LocalDate nowPlusOne = now.plusDays(1);
+		DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		String result = dateFormat.format(nowPlusOne);
+		System.out.println(result);
 	}
 }

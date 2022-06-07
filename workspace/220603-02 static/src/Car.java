@@ -25,9 +25,9 @@ class Car {
 		id = numberOfCars;
 	}
 	
-	public static void printColor() {
-		System.out.println(color); // 스태틱으로 불러낸다면 필드 안에 뭔가 값을 가져야 한다
-	}
+//	public static void printColor() {
+//		System.out.println(color); // 스태틱으로 불러낸다면 필드 안에 뭔가 값을 가져야 한다
+//	}
 	
 //	public void printStaticNumber() { // 객체의 행동으로 만들어뒀다면
 //		// Car.printStaticNumber(); 처럼 쓰는게 아니라
