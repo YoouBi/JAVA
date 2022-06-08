@@ -40,9 +40,9 @@ public class Main3 {
 		int[] ten = new int [10];
 		
 		System.out.println("10개의 정수를 입력해주세요.");
-		for (int k = 0; k < 10; k++) {
+		for (int i = 0; i < 10; i++) {
 			int l = scan.nextInt();
-			ten[k] = l;
+			ten[i] = l;
 		}
 		
 		for (int i = 0; i < 10; i++) { // 01 - 10 반복문
