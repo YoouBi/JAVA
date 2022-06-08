@@ -9,24 +9,57 @@ public class Main6 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		int size = 0;
+//		int length = 0;
+//		int i = 0;
+//		int j = 0;
+//		int[] k;
+//	
+//		System.out.println("5개 이상의 정수를 입력해주시고 그만두고 싶으실 때 음의 정수를 입력해주세요.");
+//		do {		
+//			j = scan.nextInt();
+//			if (j < 0)
+//				break;
+//			length++;
+//			k[i] = j;
+//			i++;
+//		} while (j > 0);
+//		
+//		int size = length;
+//		k = new int[size];
+//		
+//		for (int l = size - 1; l >= 0; l--) {
+//			System.out.println(k[i]);
+//		}
+		
+//////////////어쩔 수 없다 칸 지정해놓고 입력받은 값 다 밀자//////////////
+
 		int j = 0;
-		int[] k = new int[size];
+		int[] k = new int[5];
 	
 		System.out.println("5개 이상의 정수를 입력해주시고 그만두고 싶으실 때 음의 정수를 입력해주세요.");
-		while (j > 0) { // 앗 j가 for문에서 지역변수가 돼서 새로운 조건문을 써줘야할듯!
-			for (int i = 0; i < k.length; i++) {
+		do {		
 			j = scan.nextInt();
-			if (j < 0) {
+			if (j < 0)
 				break;
+			
+			for (int i = 0; i < k.length; i++) {
+				if(i > 0) k[i - 1] = k[i];
+			
+				k[i] = j;
 			}
-			k[i] = j;
-			size++;
-			}
-		}
+		} while (j > 0);
 		
-		for (int i = size - 1; i >= 0; i--) {
+		System.out.println("마지막 5개의 정수는 순서대로 ");
+		
+		for (int i = 0; i <= k.length - 1; i++) {
 			System.out.println(k[i]);
 		}
+		
+		System.out.println("마지막 5개의 정수는 역순으로 ");
+		for (int i = k.length - 1; i >= 0; i--) {
+			System.out.println(k[i]);
+		}
+		
+		System.out.println("입니다. ");
 	}
 }
