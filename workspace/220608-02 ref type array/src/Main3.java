@@ -41,8 +41,8 @@ public class Main3 {
 		
 		System.out.println("10개의 정수를 입력해주세요.");
 		for (int i = 0; i < 10; i++) {
-			int l = scan.nextInt();
-			ten[i] = l;
+			int j = scan.nextInt();
+			ten[i] = j;
 		}
 		
 		for (int i = 0; i < 10; i++) { // 01 - 10 반복문
