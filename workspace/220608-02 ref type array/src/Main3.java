@@ -1,12 +1,12 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
 // p237 2번
 // 15
 // 63
 // 12
 // 32
 // 2
+
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main3 {
 	public static void main(String[] args) {
