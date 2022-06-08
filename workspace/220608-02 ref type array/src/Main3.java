@@ -38,21 +38,17 @@ public class Main3 {
 // 1~100 배열 안에 들어가는걸로 체크할랬는데 배열 자체를 입력받을 정수로 입력해서...?
 		
 		int[] ten = new int [10];
-		int i = 0;
-		int j = 1;
-		int l = 1;
-		String a = "";
 		
 		System.out.println("10개의 정수를 입력해주세요.");
 		for (int k = 0; k < 10; k++) {
-			l = scan.nextInt();
+			int l = scan.nextInt();
 			ten[k] = l;
 		}
 		
-		for (i = 0; i < 9; i++) { // 십의자리 숫자
+		for (int i = 0; i < 10; i++) { // 01 - 10 반복문
 			System.out.println((i * 10 + 1) + "-" + (i * 10 + 10) + " : ");
-			for (j = 1; j <= 10; j++) { // 일의자리 숫자
-				if(i * 10 + 1 <= ten[i] && ten[i] <= i * 10 + 10) System.out.print('*');
+			for (int j = 0; j < 10; j++) { // 01 - 10 체크
+				if(i * 10 + 1 <= ten[j] && ten[j] <= i * 10 + 10) System.out.print('*');
 			}
 			System.out.println();
 		}
