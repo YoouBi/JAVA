@@ -1,5 +1,5 @@
 // p237 1번
-// 기존에 작성하였던 학생관리 프로그램을 배열을 활용할 수 있는 방법으로 수정해보세용~~~
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class Main2 {
 		Scanner scan = new Scanner(System.in);
 		
 		int[] chair = new int[10];
-		Arrays.fill(chair, 0);
+//		Arrays.fill(chair, 0); // 기본적으로 정수의 지정되지 않는 값은 0이기 때문에 굳이 초기화 안해줘도 될 듯
 		int YesOrNo = 1;
 		
 		while (YesOrNo != 0) {
@@ -26,16 +26,16 @@ public class Main2 {
 				for (int a : chair) {
 					System.out.print(a + "　");
 				}
-					System.out.println("\n몇번째 좌석을 예약하시겠습니까?");
-					int seat = scan.nextInt();
-					if (0 < seat && chair[seat - 1] == 1 && seat < 11) {
-						System.out.println("이미 예약되어있는 자리입니다.");
-					} else if (chair[seat - 1] == 0) {
-						chair[seat - 1] = 1;
-						System.out.println("예약되었습니다.");
-					} else {
-						System.out.println("입력하신 좌석은 없는 번호입니다.");
-					}
+				System.out.println("\n몇번째 좌석을 예약하시겠습니까?");
+				int seat = scan.nextInt();
+				if (0 < seat && chair[seat - 1] == 1 && seat < 11) {
+					System.out.println("이미 예약되어있는 자리입니다.");
+				} else if (chair[seat - 1] == 0) {
+					chair[seat - 1] = 1;
+					System.out.println("예약되었습니다.");
+				} else {
+					System.out.println("입력하신 좌석은 없는 번호입니다.");
+				}
 			} else System.out.println("잘못된 입력값입니다.");
 		}
 	}
