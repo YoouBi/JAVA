@@ -19,6 +19,7 @@ public class Main5 {
 //		int[] arr2 = arr;
 //		
 //		System.out.println(Arrays.toString(copy));
-//		System.out.println(Arrays.equals(arr, copy));
+//		System.out.println(Arrays.equals(arr, copy)); // null 확인까지 같이 될 것이다
+//		System.out.println(Arrays.equals(arr, arr2));
 	}
 }

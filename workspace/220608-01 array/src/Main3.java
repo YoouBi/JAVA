@@ -26,15 +26,32 @@ public class Main3 {
 		}
 	}
 	
+	/* 쌤꺼
+	public static boolean isSame(int[] left, int[] right) { // 동일하다, 하지 않다의 두 값으로 나오니 불연값으로 가능
+		if (left.length != right.length) {
+			return false;
+		}
+		
+		for (int i = 0; i < left.length; i++) {
+			if (left[i] != right[i]) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	 */
+	
+	
 	public static void main(String[] args) {
 		int[] test = { 50, 70, 90, 110 };
-		int[] test2 = { 50, 70, 90, 110 };
-		int[] test3 = { 70, 90, 110 };
-		int[] test4 = { 60, 70, 90, 110 };
+//		int[] test2 = { 50, 70, 90, 110 };
+//		int[] test3 = { 70, 90, 110 };
+//		int[] test4 = { 60, 70, 90, 110 };
 		int[] c = copyArray(test);
 		System.out.println(Arrays.toString(c)); // arrays 는 배열에 관련된 메소드로서 문자열 형태로 조립해서 반환해준다
-		twinArray(test, test2);
-		twinArray(test, test3);
-		twinArray(test, test4);
+//		twinArray(test, test2);
+//		twinArray(test, test3);
+//		twinArray(test, test4);
 	}
 }

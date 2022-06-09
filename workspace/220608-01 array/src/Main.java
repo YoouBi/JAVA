@@ -16,7 +16,8 @@ public class Main {
 			if (!(arr[i] / 100 > 0) && arr[i] < 10) {
 				System.out.println(arr[i]);
 			}
-		}
+		} // 논리의 순서때문에 똑같은 루트의 for문 반복을 두번하게 되었지만
+		// 배열 혹은 메소드를 활용하면 될 것
 		
 		// 개수 : 3
 		// -- 목록 --

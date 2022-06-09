@@ -5,11 +5,7 @@ public class Main4 {
 	// 예) [1, 2, 3] [10, 11, 12, 13, 14]
 	// [1, 2, 3, 10, 11, 12, 13, 14]
 	
-	// 두 개 정수 배열의 합을 가지는 배열을 반환하는 메소드
-	// 예) [1, 2, 3] [10, 11, 12, 13, 14]
-	// [11, 13, 15, 13, 14]
-	
-	public static int[] sum(int[] left, int[] right) {
+	public static int[] sum(int[] left, int[] right) { // 인지형 배열 정수 두개를 전달받음
 		int[] sum = new int[left.length + right.length];
 		int j = 0;
 		for (int i = 0; i < sum.length; i++) {
@@ -32,10 +28,19 @@ public class Main4 {
 		return newArray;
 	} */
 	
+	
+	
+	//////////////////////////////////////////////////////////////////////////////////
+	
+	
+	
+	// 두 개 정수 배열의 합을 가지는 배열을 반환하는 메소드
+	// 예) [1, 2, 3] [10, 11, 12, 13, 14]
+	// [11, 13, 15, 13, 14]
 	public static int[] sum2(int[] left, int[] right) {
 		int[] sum2 = new int[left.length > right.length ? left.length : right.length];
 		for (int i = 0; i < sum2.length; i++) {
-			if () { //?
+			if () { //? 아 맞다 해보려고 했는데 까먹었네 주말에 해보기
 				sum2[i] += left[i] + right[i];
 			} else if (left.length > right.length) {
 				sum2[i] += right[i];
@@ -44,7 +49,7 @@ public class Main4 {
 			}
 		}
 		return sum2;
-	}
+	} 
 	
 	/* 쌤이 한거...
 	public static int[] sumArray(int[] left, int[] right) {
@@ -84,6 +89,12 @@ public class Main4 {
 		
 		return copy;
 	} */
+	
+	
+	
+	//////////////////////////////////////////////////////////////////////////////////
+	
+	
 	
 	public static void main(String[] args) {
 		int[] arr = { 10, 20, 30 };

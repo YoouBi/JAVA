@@ -5,7 +5,7 @@ public class Main6Test {
 //		for (int i = 0; i < numbers.length; i++) {
 //			sum += numbers[i];
 //		}
-//		return sum; // 반환이 안됨 왜? int result = sum(10, 20);는 인트 배열형이 아니니까
+//		return sum; // 반환이 안됨 왜? int result = sum(10, 20); 는 인트 배열형이 아니니까
 //	}
 //	
 //	public static void main(String[] args) {
@@ -24,6 +24,7 @@ public class Main6Test {
 	public static void main(String[] args) {
 		int result = sum(10, 20, 30, 40, 50, 60, 70, 80);
 		// 이런식으로 굳이 배열을 새로 지정을 해주지 않고도 입력 받는 값을 가변 파라미터로 하면 된다
+		// (int[] a) 파라미터의 이 형식을 계속 맞춰서 쓰기 귀찮고 불편해서 편의를 위해 만든 것
 		System.out.println(result);
 	}
 }
