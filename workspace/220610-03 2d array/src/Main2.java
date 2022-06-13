@@ -50,8 +50,10 @@ public class Main2 {
 		System.out.println(Arrays.deepToString(arr));
 		System.out.println(Arrays.deepToString(arr2));
 
-		System.out.println(arr == arr2); // 참조가 다르다
+		System.out.println(arr == arr2); // 참조가 다르다 (왼쪽도 오른쪽도 참조형이니 참조하고 있는 인스턴스가 같은지를 물어보는것)
+		// 그런데 둘은 뉴가 붙어 새로 생긴 인스턴스들이니 들어있는 원소값도 다르다
 		System.out.println(Arrays.equals(arr, arr2)); // 문자열로도 안됨
-		System.out.println(Arrays.deepEquals(arr, arr2)); // deepEquals 비교로 된다!
+		System.out.println(Arrays.deepEquals(arr, arr2)); // 다중 차원의 배열에 원소, 길이 값이 같은지를 볼 때엔 deepEquals 비교로 된다!
+		// 혹은 이중반복문으로 확인 가능
 	}
 }

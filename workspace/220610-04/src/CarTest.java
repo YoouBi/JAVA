@@ -2,6 +2,7 @@
 class Car {
 	// 필드 선언
 	private int speed;	// 속도
+	
 	// 중복 메소드 : 정수 버전
 	public void setSpeed(int s) {
 		speed = s;

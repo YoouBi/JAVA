@@ -56,7 +56,7 @@ public class Main2 {
 		System.out.println("1.Cola 2.Sprite 3.Fanta");
 		String name = scan.nextLine();
 		
-		if (name.equals("1")) name = "Cola";
+		if (name.equals("1")) name = "COLA";
 		else if (name.equals("2")) name = "Sprite";
 		else if (name.equals("3")) name = "Fanta";
 		else name = "no";
