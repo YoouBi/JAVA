@@ -13,6 +13,7 @@ class Dog extends Animal {
 }
 
 class Cat extends Animal {
+	@Override
 	public void sound() { // 동일한 사운드라 하더라도 부모의 것이 아니라 자식의 것이 호출됨
 		System.out.println("냐옹");
 	}
