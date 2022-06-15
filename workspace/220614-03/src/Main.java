@@ -62,20 +62,23 @@ class Group extends Member {
 	
 	public void group() {
 		for (int i = 0; i < group.length; i++) {
-			input();		
+			boolean twin = false;
+			input();
+			
 			for (int j = 0; j < member.length; j++) {
 				group[i][j] = member[j];
 				
-				boolean twin = false;
 				for (int k = 0; k < i; k++) {
-					if(0 < i && group[k][j].equals(group[i][j])) twin = true;
+					if(0 < i && group[i].equals(group[k])) twin = true;
 				}
+				
 				if(twin) {
 					System.out.println("중복되는 회원이 있습니다.");
 					i--;
 				}
 			}
 			Arrays.fill(member, null);
+			twin = false;
 		}
 	}
 	
