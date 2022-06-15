@@ -4,6 +4,7 @@ public class Car {
 	public Car(String model) {
 		this.model = model;
 	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (obj instanceof Car) {

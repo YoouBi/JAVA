@@ -1,14 +1,17 @@
 package books;
-public class Book {
+
+public class Book extends Object {
 	private String title;
 	private int pages;
 	private String author;
+	
 	public Book(String title, int pages, String author) {
 		super();
 		this.title = title;
 		this.pages = pages;
 		this.author = author;
 	}
+	
 	public String getAuthor() {
 		return author;
 	}
