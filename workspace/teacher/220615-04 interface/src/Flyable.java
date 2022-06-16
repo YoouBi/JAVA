@@ -1,5 +1,5 @@
 public interface Flyable {
-	void fly();
+	public void fly();
 }
 
 class Animal {}

@@ -6,6 +6,7 @@
 public abstract class Shape { // 추상 클래스
 	private int x;
 	private int y;
+	
 	public Shape(int x, int y) {
 		super();
 		this.x = x;

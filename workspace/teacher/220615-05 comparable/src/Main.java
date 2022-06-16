@@ -6,16 +6,14 @@ class Member implements Comparable<Member> {
 	int weight; // 몸무게
 	
 	public Member(String name, int height, int weight) {
-		super();
 		this.name = name;
 		this.height = height;
 		this.weight = weight;
 	}
 
-	// 키
 	@Override
 	public int compareTo(Member o) {
-		return this.height - o.height;
+		return height - o.height;
 	}
 }
 
