@@ -59,5 +59,13 @@ public class Main4 {
 		
 		System.out.println("금요일은 총 " + friCount + "번 나왔습니다.");
 		System.out.println("시계는 총 " + clockCount + "번 나왔습니다.");
+		
+		
+		
+		String[] split = friday.split("금요일");
+		System.out.println(split.length - 1);
+		
+		String[] split1 = friday.split("시계");
+		System.out.println(split1.length - 1);
 	}
 }
