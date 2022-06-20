@@ -67,5 +67,8 @@ public class Main4 {
 		
 		String[] split1 = friday.split("시계");
 		System.out.println(split1.length - 1);
+		
+		
+		// 시계라는 단어를 찾을 때 '시' 만 찾아서 인덱스 오브로 다음 글자에 계가 나오는...걸 찾는 방법(쌤)
 	}
 }
