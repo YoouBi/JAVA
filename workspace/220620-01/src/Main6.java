@@ -13,7 +13,7 @@ public class Main6 {
 		System.out.println(list); // 오름차순 정렬로 출력됨
 		
 		int index = Collections.binarySearch(list, 8); // 리스트의 원소를 던져주면 인덱스의 번호를 알려준다
-//		int index2 = Collections.binarySearch(list2, "a");
+//		int index2 = Collections.binarySearch(list2, "a"); // binarySearch는 중복이 없고, 정렬이 되어있어야 쓸 수 있다
 
 		System.out.println("8의 인덱스: " + index);
 //		System.out.println("a의 인덱스: " + index2);
