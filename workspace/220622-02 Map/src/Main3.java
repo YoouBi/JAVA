@@ -16,26 +16,22 @@ import java.util.Set;
 
 // 계산 결과 출력 가능
 class Chinese {
-	private String menu;
 	private int number;
+	private String menu;
+	private int price;
 	
-	public Chinese(String menu, int number) {
+	public Chinese(int number, String menu, int price) {
 		super();
-		this.menu = menu;
 		this.number = number;
+		this.menu = menu;
+		this.price = price;
 	}
 	
-	public Chinese(String menu) {
+	public Chinese(int number, String menu) {
+		super();
+		this.number = number;
 		this.menu = menu;
-		number = number;
-	}
-	
-	public String getMenu() {
-		return menu;
-	}
-
-	public void setMenu(String menu) {
-		this.menu = menu;
+		price = price;
 	}
 
 	public int getNumber() {
@@ -45,7 +41,23 @@ class Chinese {
 	public void setNumber(int number) {
 		this.number = number;
 	}
-	
+
+	public String getMenu() {
+		return menu;
+	}
+
+	public void setMenu(String menu) {
+		this.menu = menu;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
 	@Override
 	public String toString() {
 		return menu + number;
@@ -61,14 +73,14 @@ public class Main3 {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		Chinese blackNoodle = new Chinese("짜장면"); // 제일처음 했던대로 이름, 가격, 번호 쓰고
-		Chinese spicyNoodleSoup = new Chinese("짬뽕");
-		Chinese friedRice = new Chinese("볶음밥");
+		Chinese blackNoodle = new Chinese(1, "짜장면", 2500); // 제일처음 했던대로 이름, 가격, 번호 쓰고
+		Chinese spicyNoodleSoup = new Chinese(2, "짬뽕", 4000);
+		Chinese friedRice = new Chinese(3, "볶음밥", 4000);
 		
 		Map<Chinese, Integer> menu = new HashMap<>();
-		menu.put(blackNoodle, 2500); // 클래스와 갯수로 해서 해시코드...? 아니다 각각 들어가는건 이게 맞을듯
-		menu.put(spicyNoodleSoup, 4000);
-		menu.put(friedRice, 4000);
+		menu.put(blackNoodle, 0); // 클래스와 갯수로 해서 해시코드...? 아니다 각각 들어가는건 이게 맞을듯
+		menu.put(spicyNoodleSoup, 0);
+		menu.put(friedRice, 0);
 		
 		Set<Chinese> keySet = menu.keySet();
 		
@@ -96,12 +108,10 @@ public class Main3 {
 					Set<Chinese> hashSet = new HashSet<>();
 					
 					// 이름값이 같은걸 같은 해시코드로 인식해서 새로운 new Chinese("같은 이름", 덮어씌울 갯수);로 비교
-					hashSet.add(new Chinese(menuKey, menuValue)); // 해시코드 쓰는거니까 덮어씌우는...건가...?
-					
-					
-					if (menu.containsKey(Chinese)) { // menu에
-						menu.put(Chinese, menuValue);
-					}
+//					hashSet.add(new Chinese(menuKey, menuValue)); // 해시코드 쓰는거니까 덮어씌우는...건가...?
+//					
+//					
+					menu.put(new Chinese(menu.size() + 1,  menuKey), menuValue);
 					
 					
 					hashSet.add(blackNoodle);
@@ -111,7 +121,7 @@ public class Main3 {
 					//////////////////////////////////////////////////////
 					
 					
-					System.out.println(hashSet);
+					System.out.println(menu.get(new Chinese(menu.size() + 1,  menuKey)));
 					
 					if(menuKey.equals("20000") || menuValue == 20000) break;
 				}

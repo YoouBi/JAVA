@@ -9,19 +9,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import java.awt.Dimension;
-import java.awt.Component;
-import javax.swing.JSeparator;
 
 // 사용자 입력을 받을 수 있는 GUI를 만들고 그 입력을 구현할 수 있는 프로그램
 // 결과는 다얄로그로 보여줘도 됨!
 // 다 하면 문제를 다시 출력하는 기능 구현
-public class Main8 extends JFrame {
+public class Main extends JFrame {
 	private int x;
 	private int y;
 	private int sum;
 
-	public Main8() {
+	public Main() {
 		JPanel pnlTop = new JPanel();
 		JPanel pnlBottom = new JPanel();
 		JPanel pnlBox = new JPanel();
@@ -40,8 +37,6 @@ public class Main8 extends JFrame {
 		pnlBox.setLayout(box);
 		
 		JLabel Question = new JLabel(x + " + " + y + " = ?");
-		Question.setAlignmentX(1.0f);
-		Question.setPreferredSize(new Dimension(80, 15));
 		JLabel OX = new JLabel("결과");
 		
 		JButton Input = new JButton("확인");
@@ -78,7 +73,7 @@ public class Main8 extends JFrame {
 		pnlBox.add(pnlTop);
 		pnlBox.add(pnlBottom);
 		
-		getContentPane().add(pnlBox);
+		add(pnlBox);
 		
 		pack();
 		
@@ -86,6 +81,6 @@ public class Main8 extends JFrame {
 	}
 	
 	public static void main(String[] args) {
-		new Main8().setVisible(true);
+		new Main().setVisible(true);
 	}
 }
