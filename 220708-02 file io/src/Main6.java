@@ -10,9 +10,6 @@ public class Main6 {
 		// persons.txt
 		// 파일 정보를 한 줄씩 읽어서
 		// 1. 콘솔 출력
-		
-		// 2. 사람 평균 나이 구해서 콘솔 출력
-		
 		File file = new File("d:\\filetest\\persons.txt");
 		
 		BufferedReader br = null;
@@ -23,9 +20,10 @@ public class Main6 {
 			int sum = 0;
 			int count = 0;
 			String line;
-			while ( (line = br.readLine()) != null ) {
+			while ((line = br.readLine()) != null) {
 				System.out.println(line);
 				
+				// 2. 사람 평균 나이 구해서 출력
 				int index = line.indexOf(',');
 				String strAge = line.substring(index + 1);
 				Integer age = Integer.valueOf(strAge);
