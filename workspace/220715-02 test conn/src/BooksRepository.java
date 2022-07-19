@@ -21,6 +21,9 @@ public class BooksRepository {
 	public int add(Book book) throws SQLException { // 책 추가만 해주는 클래스인데
 		// 결과값을 인트로만 알려준다면 모든 상황에 대한 인트값이 만들어져 있어야 될 것임
 		// 잘되면 1, 안되면 예외로 알려줄 것
+		
+		// 반환은 언제나 간단한 정보를 넘겨주려고 하고 (int로 모든 정보를 사용할 수 있다)
+		// 안됐을 경우에만 복잡한 정보를 주려고 하는게 좋다
 		String query = "INSERT INTO books (title, price) VALUES ('" + book.getTitle() + "', " + book.getPrice() + ")";
 		System.out.println("추가: " + query);
 		
