@@ -70,8 +70,8 @@ public class FileDB { // 파일이 올라갔다는건 DB가 테이블의 ROW로�
 //		} catch (FileNotFoundException e) {
 //			e.printStackTrace();
 //		} finally {
-//			DBUtill.closeStmt(pstmt);
-//			DBUtill.closeConn(conn);
+//			DBUtil.closeStmt(pstmt);
+//			DBUtil.closeConn(conn);
 //		}
 	}
 }
