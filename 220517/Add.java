@@ -21,7 +21,6 @@ public class Add {
         System.out.println(sum);
         // System.out.println("sum"); 이라고 쓰면 sum이라는 문자열 그 자체가 출력됨
         // return; 생략 가능
-
         // System.out.println(); 을 return 키워드 밑에 적으면 도달할 수 없는 문장으로 에러가 남
 
         System.out.println(x - y);
